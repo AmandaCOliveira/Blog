@@ -21,5 +21,7 @@ urlpatterns = [
 
     url(r'^',include('blog.urls') ),
 
+    #url(r'^cadastro/',include('cadastro.urls') ),
+
     url(r'^admin/', admin.site.urls),
 ]
