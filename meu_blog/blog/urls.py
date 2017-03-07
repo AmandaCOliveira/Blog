@@ -6,4 +6,6 @@ from . import views
 urlpatterns = patterns(views, 
     url('^$', views.blog, name='blog'),
     #url('^$', views.blog, name='blog'),
+ 
+ 
 )

@@ -16,6 +16,7 @@ Including another URLconf
 from django.conf.urls import url, include
 from django.contrib import admin
 from blog.models import Artigo
+from blog.feeds import UltimosArtigos
 
 urlpatterns = [
 
@@ -24,4 +25,7 @@ urlpatterns = [
     #url(r'^cadastro/',include('cadastro.urls') ),
 
     url(r'^admin/', admin.site.urls),
+
+    url(r'^rss/ultimos', UltimosArtigos())
+    #url(r'^rss/(?P<url>.*)/$', 'django.contrib.syndication.views.Feed',{'feed_dict': {'ultimos': UltimosArtigos}}),
 ]
