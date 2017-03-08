@@ -13,4 +13,7 @@ def blog(request):
         context_instance = RequestContext(request)
     )
 
+def artigo(request,artigo_id):
+    artigo = Artigo.objects.get(id=artigo_id)
+    return render_to_response('blog/artigo.html', locals())
 

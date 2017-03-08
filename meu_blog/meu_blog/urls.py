@@ -26,6 +26,8 @@ urlpatterns = [
 
     url(r'^admin/', admin.site.urls),
 
-    url(r'^rss/ultimos', UltimosArtigos())
+    url(r'^rss/ultimos', UltimosArtigos()),
     #url(r'^rss/(?P<url>.*)/$', 'django.contrib.syndication.views.Feed',{'feed_dict': {'ultimos': UltimosArtigos}}),
+
+    url (r'^artigo/(?P<artigo_id>\d+)/$', 'blog.views.artigo'),
 ]
